@@ -13,7 +13,7 @@ deploy:
     secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
   bucket: test-tr
 #  upload-dir: target
-  local-dir: target
+#  local-dir: target
   skip_cleanup: true
   on:
     repo: GabrielCD/tripping-octo-computing-machine
