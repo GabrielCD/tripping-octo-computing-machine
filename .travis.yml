@@ -1,4 +1,11 @@
 language: java
+
+after_deploy:
+  - ls
+  - pwd
+  - whoami
+  - ls target/
+
 deploy:
   provider: s3
   access_key_id: AKIAI7T2BRWTIX6SI2ZQ
