@@ -14,33 +14,23 @@ after_deploy:
   - ls s3/
 
 deploy:
-  provider: s3
-  access_key_id: AKIAI7T2BRWTIX6SI2ZQ
-  secret_access_key:
-    secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
-  bucket: test-tr
-  upload-dir: pub
-  local-dir: s3
-  skip_cleanup: true
-  on:
-    repo: GabrielCD/tripping-octo-computing-machine 
-  provider: s3
-  access_key_id: AKIAI7T2BRWTIX6SI2ZQ
-  secret_access_key:
-    secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
-  bucket: test-tr
-  upload-dir: branch
-  local-dir: s3
-  skip_cleanup: true
-  on:
-    branch: production
-#  - provider: s3
-#    access_key_id: AKIAI7T2BRWTIX6SI2ZQ
-#    secret_access_key:
-#      secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
-#    bucket: test-tr
-#    upload-dir: branch
-#    local-dir: s3
-#    skip_cleanup: true
-#    on:
-#      branch: production
+  - provider: s3
+    access_key_id: AKIAI7T2BRWTIX6SI2ZQ
+    secret_access_key:
+      secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
+    bucket: test-tr
+    upload-dir: pub
+    local-dir: s3
+    skip_cleanup: true
+    on:
+      repo: GabrielCD/tripping-octo-computing-machine 
+  - provider: s3
+    access_key_id: AKIAI7T2BRWTIX6SI2ZQ
+    secret_access_key:
+      secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
+    bucket: test-tr
+    upload-dir: branch
+    local-dir: s3
+    skip_cleanup: true
+    on:
+      branch: production
