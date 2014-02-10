@@ -1,10 +1,17 @@
 language: java
 
+before_deploy:
+  - mkdir s3
+  - cp target/classes/com/mycompany/app/* s3/
+  - ls s3/
+  - echo "classes in https://s3-us-west-2.amazonaws.com/test-tr/pub/"
+
 after_deploy:
   - ls
   - pwd
   - whoami
   - ls target/
+  - ls s3/
 
 deploy:
   provider: s3
@@ -12,8 +19,8 @@ deploy:
   secret_access_key:
     secure: TfQVNGquYx+6udrZ9jjWHDnKbFkclG2lHMpZwXiRy0OWNpl59nPfmmlLF5YKqMlT9HB3QdQsvfzD9AhkadKv5GKvm2tIG6OOgnm1btHnCyBHhwDQLIEF0eyo/OeWBbmL/EOnqIaVOIhukTWoSrO6pJQrLbtdfcAxAn0QqXsM8mw=
   bucket: test-tr
-#  upload-dir: target
-#  local-dir: target
+  upload-dir: pub
+  local-dir: s3
   skip_cleanup: true
   on:
     repo: GabrielCD/tripping-octo-computing-machine
